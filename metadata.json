@@ -1,0 +1,6 @@
+{
+  "name": "Al-Quran Majeed",
+  "description": "A live Quran app with Uthmani Arabic text, Urdu translation, audio recitations, and bookmarking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,23 @@
+--- app/src/main/java/com/example/data/mushaf/QcfDataManager.kt
++++ app/src/main/java/com/example/data/mushaf/QcfDataManager.kt
+@@ -126,8 +126,6 @@
+             val fontFile = File(fontsDir, fontFileName)
+             // network download removed
+-            // URL(fontUrl).openStream().use { input ->
+-                // FileOutputStream(fontFile).use { output ->
+-                    // input.copyTo(output)
+-                }
+-            }
+-            val tf = Typeface.createFromFile(fontFile)
+-            typefaceCache[fontName] = tf
+-            fontFamilyCache[fontName] = FontFamily(tf)
+-            true
++            if (fontFile.exists()) {
++                val tf = Typeface.createFromFile(fontFile)
++                typefaceCache[fontName] = tf
++                fontFamilyCache[fontName] = FontFamily(tf)
++                true
++            } else {
++                false
++            }
+         } catch (e: Exception) {

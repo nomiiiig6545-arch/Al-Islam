@@ -1,0 +1,1 @@
+sed -i 's/crashLog = sw.toString()/getSharedPreferences("crash", android.content.Context.MODE_PRIVATE).edit().putString("log", sw.toString()).commit(); System.exit(1)/' app/src/main/java/com/example/MainActivity.kt
